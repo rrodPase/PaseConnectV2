@@ -1,31 +1,6 @@
-11:26:48.520 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="email"]
-11:26:48.575 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="password"]
-11:26:48.612 INFO  AUTOMATION - Validando visualidad: By.tagName: body
-11:26:48.650 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="single-spa-application:@pase-connect/login-front"]/div[1]/div[2]/main/div[1]/form/div/div[4]/div/button
-11:26:48.699 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="onboarding-app-root"]/div[1]/main/div/div/div/div[1]/p[1]
-11:27:21.767 INFO  AUTOMATION - Se inicio sesion con: [[ChromeDriver: chrome on windows (a69d81db888a7620bdf45ab3223901a3)] -> xpath: //*[@id="onboarding-app-root"]/div[1]/main/div/div/div/div[1]/p[1]]
-11:27:23.160 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="email"]
-11:27:23.260 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="password"]
-11:27:23.316 INFO  AUTOMATION - Validando visualidad: By.tagName: body
-11:27:23.382 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="single-spa-application:@pase-connect/login-front"]/div[1]/div[2]/main/div[1]/form/div/div[4]/div/button
-11:27:23.463 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="onboarding-app-root"]/div[1]/main/div/div/div/div[1]/p[1]
-11:27:56.519 INFO  AUTOMATION - Se inicio sesion con: [[ChromeDriver: chrome on windows (a69d81db888a7620bdf45ab3223901a3)] -> xpath: //*[@id="onboarding-app-root"]/div[1]/main/div/div/div/div[1]/p[1]]
-11:27:57.678 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="email"]
-11:27:57.750 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="password"]
-11:27:57.789 INFO  AUTOMATION - Validando visualidad: By.tagName: body
-11:27:57.831 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="single-spa-application:@pase-connect/login-front"]/div[1]/div[2]/main/div[1]/form/div/div[4]/div/button
-11:27:57.895 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="onboarding-app-root"]/div[1]/main/div/div/div/div[1]/p[1]
-11:28:31.007 INFO  AUTOMATION - Se inicio sesion con: [[ChromeDriver: chrome on windows (a69d81db888a7620bdf45ab3223901a3)] -> xpath: //*[@id="onboarding-app-root"]/div[1]/main/div/div/div/div[1]/p[1]]
-11:28:32.225 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="email"]
-11:28:32.289 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="password"]
-11:28:32.319 INFO  AUTOMATION - Validando visualidad: By.tagName: body
-11:28:32.352 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="single-spa-application:@pase-connect/login-front"]/div[1]/div[2]/main/div[1]/form/div/div[4]/div/button
-11:28:32.392 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id=":r3:"]
-11:28:36.432 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="reka-dropdown-menu-trigger-v-1-4"]/span
-11:28:36.534 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="reka-dropdown-menu-content-v-1-9"]/div/div[2]/button[2]/span[2]
-11:28:36.633 INFO  AUTOMATION - Validando visualidad: By.name: address
-11:28:36.687 INFO  AUTOMATION - Validando visualidad: By.name: password
-11:28:41.936 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="__nuxt"]/div/div[2]/main/div[2]/div[2]/ul/li[1]/a/div/div
-11:28:46.384 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id=":r3:"]
-11:28:46.443 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="onboarding-app-root"]/div[1]/main/div/div/div/div[1]/p[1]
-11:29:19.538 INFO  AUTOMATION - Se inicio sesion con: [[ChromeDriver: chrome on windows (a69d81db888a7620bdf45ab3223901a3)] -> xpath: //*[@id="onboarding-app-root"]/div[1]/main/div/div/div/div[1]/p[1]]
+18:51:23.948 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="email"]
+18:51:23.987 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="password"]
+18:51:24.029 INFO  AUTOMATION - Validando visualidad: By.tagName: body
+18:51:24.066 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="single-spa-application:@pase-connect/login-front"]/div[1]/div[2]/main/div[1]/form/div/div[4]/div/button
+18:51:24.100 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id=":r3:"]
+18:51:57.184 ERROR AUTOMATION - Item By.xpath: //*[@id=":r3:"] NO es visible:

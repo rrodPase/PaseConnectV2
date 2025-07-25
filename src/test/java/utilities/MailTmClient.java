@@ -26,21 +26,32 @@ public class MailTmClient extends PageObject {
     private final By SelectEmail = By.xpath("//*[@id=\"__nuxt\"]/div/div[2]/main/div[2]/div[2]/ul/li[1]/a/div/div");
     private final By codigoVeri = By.xpath("/html/body/table[1]/tbody/tr[4]/td");
     private final By campoCodigo = By.xpath("//*[@id=\":r3:\"]");
+    private final By correoMAILTM = By.xpath("//*[@id=\"Dont_use_WEB_use_API_OK\"]");
     public MailTmClient(WebDriver driver) {
         super(driver);
     }
 
     public void IngresarTMail(String correo, String password) throws InterruptedException {
+        HadlesAntes = driver.getWindowHandles();
+        ((JavascriptExecutor) driver).executeScript("window.open('', '_blank');");
+        Set<String> handlesDespues = driver.getWindowHandles();
+        List<String> pestana = new ArrayList<>(handlesDespues);
+        handlesDespues.removeAll(HadlesAntes);
+        TMpestaña = handlesDespues.iterator().next();
+        driver.switchTo().window(TMpestaña);
+        driver.get("https://mail.tm/es/");
 
-            HadlesAntes = driver.getWindowHandles();
-            ((JavascriptExecutor) driver).executeScript("window.open('', '_blank');");
-            Set<String> handlesDespues = driver.getWindowHandles();
-            List<String> pestana = new ArrayList<>(handlesDespues);
-            handlesDespues.removeAll(HadlesAntes);
-            TMpestaña = handlesDespues.iterator().next();
-            driver.switchTo().window(TMpestaña);
-            driver.get("https://mail.tm/es/");
+        if ("Nocorreo".equals(correo)) {
+            ObtenerCorreo(pestana);
+        } else {
             FillDataTM(correo, password, pestana);
+        }
+    }
+
+    public void ObtenerCorreo (List<String> pestana){
+        System.out.println("hola");
+        WebElement CorreoTM = find(correoMAILTM);
+        System.out.println(CorreoTM.getText());
 
     }
 
@@ -58,7 +69,7 @@ public class MailTmClient extends PageObject {
         ObtenerCodigo(pestana);
     }
 
-    private void ObtenerCodigo(List<String> pestana) throws InterruptedException {
+    private void ObtenerCodigo(List<String> pestana) {
             find(SelectEmail).click();
             driver.switchTo().frame("iFrameResizer0");
             WebElement Codigo = new WebDriverWait(driver, Duration.ofSeconds(10))

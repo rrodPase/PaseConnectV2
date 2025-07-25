@@ -33,9 +33,8 @@ public class LoginSteps extends DriveFactory {
         Login.validatwofactor();
     }
 
-    @When("Ingresa a TMail para obtener e inicia sesion con credenciales {string} y {string}")
-    public void ingresaATMailParaObtenerEIniciaSesionConCredencialesY(String Correo, String password) throws InterruptedException {
+    @When("Ingresa a TMail {string} y {string}")
+    public void ingresaATMailY(String Correo, String password) throws InterruptedException {
         MT.IngresarTMail(Correo, password);
     }
-
 }

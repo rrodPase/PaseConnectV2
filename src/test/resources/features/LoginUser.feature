@@ -22,5 +22,5 @@ Feature: LoginEjecutivo
     Given Ingresa con las siguientes credenciales "cemex@dcpa.net" y "Pass1*"
     And Da clic en iniciar sesion
     Then Se valida ingreso a twofactor
-    When Ingresa a TMail para obtener e inicia sesion con credenciales "cemex@dcpa.net" y "cemex"
+    When Ingresa a TMail "cemex@dcpa.net" y "cemex"
     Then Usuario ingresa a su cuenta correctamente
