@@ -21,6 +21,6 @@ public class finalSteps {
                 FileManager.attachPageSource(scenario);
             }
         }
-        driverFactory.destroyDriver();
+        //driverFactory.destroyDriver();
     }
 }

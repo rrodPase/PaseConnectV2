@@ -26,7 +26,10 @@ public class MailTmClient extends PageObject {
     private final By SelectEmail = By.xpath("//*[@id=\"__nuxt\"]/div/div[2]/main/div[2]/div[2]/ul/li[1]/a/div/div");
     private final By codigoVeri = By.xpath("/html/body/table[1]/tbody/tr[4]/td");
     private final By campoCodigo = By.xpath("//*[@id=\":r3:\"]");
-    private final By correoMAILTM = By.xpath("//*[@id=\"Dont_use_WEB_use_API_OK\"]");
+    private final By correoMAILTM = By.xpath("//input[@id='Dont_use_WEB_use_API_OK']");
+    private final By inputCorreoForm = By.xpath("//input[@name='email']");
+
+
     public MailTmClient(WebDriver driver) {
         super(driver);
     }
@@ -48,10 +51,15 @@ public class MailTmClient extends PageObject {
         }
     }
 
-    public void ObtenerCorreo (List<String> pestana){
-        System.out.println("hola");
-        WebElement CorreoTM = find(correoMAILTM);
-        System.out.println(CorreoTM.getText());
+    public void ObtenerCorreo (List<String> pestana) throws InterruptedException {
+        Thread.sleep(9000);
+        WebElement correoEle = find(correoMAILTM);
+        String ValorCorreo = correoEle.getAttribute("value");
+
+        driver.switchTo().defaultContent();
+        driver.switchTo().window(pestana.get(0));
+
+        find(inputCorreoForm).sendKeys(ValorCorreo);
 
     }
 

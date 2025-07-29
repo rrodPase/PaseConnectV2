@@ -19,8 +19,8 @@ public class RegistroSteps extends DriveFactory {
         registro.SelectPerfil(perfil);
     }
     @When("Completa formulario de registro")
-    public void completa_formulario_de_registro() {
-
+    public void completa_formulario_de_registro() throws InterruptedException {
+        registro.CompletarRegistro();
     }
     @Then("Se registra con exito")
     public void se_registra_con_exito() {
