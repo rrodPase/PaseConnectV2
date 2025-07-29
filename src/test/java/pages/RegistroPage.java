@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -66,12 +67,8 @@ public class RegistroPage extends PageObject {
         find(numberUnits).sendKeys(numberUnit);
         find(unitsType).click();
         find(message).sendKeys(messages);
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement checkbox = driver.findElement(iAgreeTerms);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", checkbox);
 
-        WebElement inputButton = wait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//*[@id=\"single-spa-application:@pase-connect/login-front\"]/div[1]/div[2]/main/div/div[2]/div/form/div[5]/div/input")
-        ));
-
-        inputButton.click();
     }
 }

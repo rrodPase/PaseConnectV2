@@ -1240,7 +1240,7 @@ p,label,a,h2.text_title_section_2,h5,h3,span,button {
             <div class="col-lg-12">
              <label for="message">Mensaje</label><textarea name="message" maxlength="250"></textarea>
              <div class="text-end">
-              <small>47/250</small>
+              <small>56/250</small>
              </div>
             </div>
            </div>
@@ -1254,7 +1254,7 @@ p,label,a,h2.text_title_section_2,h5,h3,span,button {
              <div>
               <div style="width: 304px; height: 78px;">
                <div>
-                <iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-20obn865w2yw" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdnXAkqAAAAAJmbivMQ4AQLGnSEw_C4_3THYlR0&amp;co=aHR0cHM6Ly9zdGFnaW5nLnBhc2Vjb25uZWN0LmNvbTo0NDM.&amp;hl=es&amp;type=image&amp;v=ngcIAHyEnHQZZIKkyKneDTW3&amp;theme=light&amp;size=normal&amp;badge=bottomright&amp;anchor-ms=20000&amp;execute-ms=15000&amp;cb=8anykexnyfrt"></iframe>
+                <iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-iqmkhfwnwrcy" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdnXAkqAAAAAJmbivMQ4AQLGnSEw_C4_3THYlR0&amp;co=aHR0cHM6Ly9zdGFnaW5nLnBhc2Vjb25uZWN0LmNvbTo0NDM.&amp;hl=es&amp;type=image&amp;v=ngcIAHyEnHQZZIKkyKneDTW3&amp;theme=light&amp;size=normal&amp;badge=bottomright&amp;anchor-ms=20000&amp;execute-ms=15000&amp;cb=zfjrqs5wk8w1"></iframe>
                </div>
                <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
               </div>
@@ -1313,7 +1313,7 @@ p,label,a,h2.text_title_section_2,h5,h3,span,button {
    <div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div>
    <div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div>
    <div style="z-index: 2000000000; position: relative;">
-    <iframe title="El reCAPTCHA caduca dentro de dos minutos" name="c-20obn865w2yw" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/bframe?hl=es&amp;v=ngcIAHyEnHQZZIKkyKneDTW3&amp;k=6LdnXAkqAAAAAJmbivMQ4AQLGnSEw_C4_3THYlR0" style="width: 100%; height: 100%;"></iframe>
+    <iframe title="El reCAPTCHA caduca dentro de dos minutos" name="c-iqmkhfwnwrcy" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/bframe?hl=es&amp;v=ngcIAHyEnHQZZIKkyKneDTW3&amp;k=6LdnXAkqAAAAAJmbivMQ4AQLGnSEw_C4_3THYlR0" style="width: 100%; height: 100%;"></iframe>
    </div>
   </div>
  </body>
