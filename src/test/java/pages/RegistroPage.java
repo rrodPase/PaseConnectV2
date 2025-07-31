@@ -34,7 +34,7 @@ public class RegistroPage extends PageObject {
     private final By btnRegistrarte = By.xpath("//*[@id=\"single-spa-application:@pase-connect/login-front\"]/div[1]/div[2]/main/div/div[2]/div/form/div[7]/div/button");
     private final By NewPassword = By.id("new-password");
     private final By confirmPassword = By.id(":r2:");
-    private final By confirmbtnPass = By.xpath("//*[@id=\"single-spa-application:@pase-connect/login-front\"]/div[1]/div[2]/main/div[1]/form/div/div[4]/div/button")
+    private final By confirmbtnPass = By.xpath("//*[@id=\"single-spa-application:@pase-connect/login-front\"]/div[1]/div[2]/main/div[1]/form/div/div[4]/div/button");
     private final By validarMessageCon =  By.xpath("//*[@id=\"modal-description\"]");
     private final By AceptarRegistro = By.xpath("/html/body/div/div[3]/div[2]/div/button");
 
