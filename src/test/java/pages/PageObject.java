@@ -3,7 +3,7 @@ package pages;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.*;
-import utilities.MovEntreVentanas;
+import utilities.SingletonData;
 import utilities.Logs;
 
 import java.time.Duration;
@@ -21,7 +21,7 @@ public class PageObject {
 
     String businessName = faker.company().name();
     String rfc = faker.regexify("[A-Z]{4}851212[A-Z]{2}[0-9]{1}");
-    String password = faker.regexify("[A-Z]{4}[0-9]{2}.");
+    String password = faker.regexify("[A-Z]{3}[a-z]{1}[0-9]{2}[.]");
     String postalCodes = "26400";
     String firstNames = faker.name().firstName();
     String lastNames = faker.name().lastName();
@@ -79,20 +79,19 @@ public class PageObject {
         Set<String> handlesDespues = driver.getWindowHandles();
         handlesDespues.removeAll(handlesAntes);
         String nuevaPestanaHandle = handlesDespues.iterator().next();
-        MovEntreVentanas.get().setVentanaTemporal(nuevaPestanaHandle);
-        MovEntreVentanas.get().setVentanaPrincipal(handlesAntes.iterator().next());
+        SingletonData.get().setVentanaTemporal(nuevaPestanaHandle);
+        SingletonData.get().setVentanaPrincipal(handlesAntes.iterator().next());
         driver.switchTo().window(nuevaPestanaHandle);
         driver.get(url);
         return nuevaPestanaHandle;
     }
 
-
     public void cambiarAVentanaTMP() {
-        String tmp = MovEntreVentanas.get().getVentanaTemporal();
+        String tmp = SingletonData.get().getVentanaTemporal();
         driver.switchTo().window(tmp);
     }
 
     public void cambiarAVentanaPrincipal() {
-        driver.switchTo().window(MovEntreVentanas.get().getVentanaPrincipal());
+        driver.switchTo().window(SingletonData.get().getVentanaPrincipal());
     }
 }

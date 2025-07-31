@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.PageObject;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MailTmClient extends PageObject {
@@ -75,12 +77,65 @@ public class MailTmClient extends PageObject {
         esperaSecunds();
         find(SelectEmail).click();
 
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 
-        WebElement linkCPassword = find(linkPassword);
-        WebElement contenedorScroll = find(By.id("scrollContainer"));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollTop = arguments[1].offsetTop;", contenedorScroll,linkCPassword);
-        linkCPassword = new WebDriverWait(driver, Duration.ofSeconds(30))
-                .until(ExpectedConditions.elementToBeClickable(linkPassword));
-        linkCPassword.click();
+        try {
+            boolean entroIframe = false;
+            try {
+                wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.id("message-view-iframe")));
+                System.out.println("Se cambió al iframe del mensaje.");
+                entroIframe = true;
+            } catch (Exception e) {
+                System.out.println("No se encontró iframe, usando DOM principal.");
+            }
+
+            List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
+            System.out.println("Cantidad de iframes encontrados: " + iframes.size());
+
+            String hrefFinal = null;
+            for (int i = 0; i < iframes.size(); i++) {
+                try {
+                    driver.switchTo().defaultContent();
+                    driver.switchTo().frame(iframes.get(i));
+                    List<WebElement> links = driver.findElements(By.tagName("a"));
+                    for (WebElement link : links) {
+                        String href = link.getAttribute("href");
+                        if (href != null && href.contains("sendgrid.net")) {
+                            System.out.println("🔗 Enlace encontrado en iframe: " + href);
+                            hrefFinal = href;
+                            break;
+                        }
+                    }
+                } catch (Exception e) {
+                    System.out.println("No se pudo acceder al iframe " + i);
+                }
+                if (hrefFinal != null) break;
+            }
+
+            if (hrefFinal == null) {
+                driver.switchTo().defaultContent();
+                List<WebElement> todosLosLinks = driver.findElements(By.tagName("a"));
+                for (WebElement link : todosLosLinks) {
+                    String href = link.getAttribute("href");
+                    if (href != null && href.contains("sendgrid.net")) {
+                        System.out.println("Enlace detectado (NO se abrirá): " + href);
+                        hrefFinal = href;
+                        break;
+                    }
+                }
+            }
+
+            if (hrefFinal != null) {
+                ((JavascriptExecutor) driver).executeScript("window.open(arguments[0], '_blank');", hrefFinal);
+                List<String> tabs = new ArrayList<>(driver.getWindowHandles());
+                driver.switchTo().window(tabs.get(tabs.size() - 1));
+
+            } else {
+                throw new RuntimeException("No se encontró ningún enlace válido de generación de contraseña.");
+            }
+
+        } catch (Exception ex) {
+            throw new RuntimeException("Error en generación de contraseña: " + ex.getMessage(), ex);
+        }
     }
 }

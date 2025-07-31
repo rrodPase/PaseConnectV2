@@ -1,13 +1,13 @@
 package utilities;
 
-public class MovEntreVentanas {
-    private static MovEntreVentanas instancia;
+public class SingletonData {
+    private static SingletonData instancia;
     private String ventanaPrincipal;
     private String ventanaTemporal;
 
-    public static MovEntreVentanas get() {
+    public static SingletonData get() {
         if (instancia == null) {
-            instancia = new MovEntreVentanas();
+            instancia = new SingletonData();
         }
         return instancia;
     }
