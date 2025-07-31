@@ -1,14 +1,17 @@
 package steps;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.RegistroPage;
 import utilities.DriveFactory;
+import utilities.MailTmClient;
 
 public class RegistroSteps extends DriveFactory {
 
     RegistroPage registro = new RegistroPage(getDriver());
+    private MailTmClient MT = new MailTmClient(getDriver());
 
     @Given("Ingresa opcion de registro")
     public void ingresa_opcion_de_registro() {
@@ -27,4 +30,18 @@ public class RegistroSteps extends DriveFactory {
 
     }
 
+    @When("Ingresa a TM para recibir correo de confirmacion")
+    public void ingresaATMParaRecibirCorreoDeConfirmacion() {
+        MT.ObtenerContraseña();
+    }
+
+    @And("Llena la informacion de contraseña y acepta")
+    public void llenaLaInformacionDeContraseñaYAcepta() {
+        registro.CompletarPassword();
+    }
+
+    @Then("Usuario Registrado Correctamente")
+    public void usuarioRegistradoCorrectamente() {
+        registro.ValidacionRegistro();
+    }
 }

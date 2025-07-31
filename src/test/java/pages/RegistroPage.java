@@ -4,18 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class RegistroPage extends PageObject {
 
     public RegistroPage(WebDriver driver) {
         super(driver);
     }
-
-
     private final By emailUser = By.xpath("//*[@id=\"single-spa-application:@pase-connect/login-front\"]/div[1]/div[2]/main/div[1]/div/h2/strong/button");
     private final By FormVerifiy = By.xpath("//*[@id=\"single-spa-application:@pase-connect/login-front\"]/div[1]/div[2]/main/div[1]/form");
     private final By inputPerfil = By.xpath("//p[@class='MuiTypography-root MuiTypography-body1 css-z4muo5']");
@@ -37,7 +31,12 @@ public class RegistroPage extends PageObject {
     private final By unitsType = By.xpath("//select//option[normalize-space(text())='Autobús Camión 2 Ejes']");
     private final By message = By.xpath("//textarea[@name='message']");
     private final By iAgreeTerms = By.xpath("//input[@name='iAgreeTerms']");
-
+    private final By btnRegistrarte = By.xpath("//*[@id=\"single-spa-application:@pase-connect/login-front\"]/div[1]/div[2]/main/div/div[2]/div/form/div[7]/div/button");
+    private final By NewPassword = By.id("new-password");
+    private final By confirmPassword = By.id(":r2:");
+    private final By confirmbtnPass = By.xpath("//*[@id=\"single-spa-application:@pase-connect/login-front\"]/div[1]/div[2]/main/div[1]/form/div/div[4]/div/button")
+    private final By validarMessageCon =  By.xpath("//*[@id=\"modal-description\"]");
+    private final By AceptarRegistro = By.xpath("/html/body/div/div[3]/div[2]/div/button");
 
     public void IngresoRegistro() {
         find(emailUser).click();
@@ -69,6 +68,19 @@ public class RegistroPage extends PageObject {
         find(message).sendKeys(messages);
         WebElement checkbox = driver.findElement(iAgreeTerms);
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", checkbox);
+        esperaSecunds();
+        find(btnRegistrarte).click();
+    }
 
+    public void CompletarPassword() {
+        find(NewPassword).sendKeys(password);
+        find(confirmPassword).sendKeys(password);
+        find(confirmbtnPass).click();
+
+    }
+
+    public void ValidacionRegistro() {
+        find(validarMessageCon);
+        find(AceptarRegistro).click();
     }
 }
