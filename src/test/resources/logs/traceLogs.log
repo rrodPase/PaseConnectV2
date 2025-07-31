@@ -1,31 +1,30 @@
-17:56:51.753 INFO  AUTOMATION - ExecutingUsuario se registra en el sitio
-17:56:55.733 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="single-spa-application:@pase-connect/login-front"]/div[1]/div[2]/main/div[1]/div/h2/strong/button
-17:56:55.824 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="single-spa-application:@pase-connect/login-front"]/div[1]/div[2]/main/div[1]/form
-17:56:55.824 INFO  AUTOMATION - Validando visualidad: By.xpath: //p[@class='MuiTypography-root MuiTypography-body1 css-z4muo5']
-17:56:56.659 INFO  AUTOMATION - Validando visualidad: By.xpath: //button[@type='submit']
-17:57:12.988 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@id='Dont_use_WEB_use_API_OK']
-17:57:13.084 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='email']
-17:57:13.184 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='businessName']
-17:57:13.238 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='TIN']
-17:57:13.308 INFO  AUTOMATION - Validando visualidad: By.xpath: //select//option[normalize-space(text())='Persona Física']
-17:57:13.341 INFO  AUTOMATION - Validando visualidad: By.xpath: //select//option[normalize-space(text())='Persona física con actividad empresarial']
-17:57:13.377 INFO  AUTOMATION - Validando visualidad: By.xpath: //select//option[normalize-space(text())='Comercio']
-17:57:13.398 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='postalCode']
-17:57:13.455 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='firstName']
-17:57:13.513 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='lastName']
-17:57:13.555 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='middleName']
-17:57:13.589 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='position']
-17:57:13.639 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='phone']
-17:57:13.706 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='extension']
-17:57:13.746 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='cellPhone']
-17:57:13.833 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='numberUnits']
-17:57:13.872 INFO  AUTOMATION - Validando visualidad: By.xpath: //select//option[normalize-space(text())='Autobús Camión 2 Ejes']
-17:57:13.889 INFO  AUTOMATION - Validando visualidad: By.xpath: //textarea[@name='message']
-17:57:29.150 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="single-spa-application:@pase-connect/login-front"]/div[1]/div[2]/main/div/div[2]/div/form/div[7]/div/button
-17:57:44.827 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="__nuxt"]/div/div[2]/main/div[2]/div[2]/ul/li[1]/a/div/div
-17:57:44.939 INFO  AUTOMATION - Validando visualidad: By.xpath: /html/body/table[1]/tbody/tr[3]/td/a
-17:58:21.086 ERROR AUTOMATION - Item By.xpath: /html/body/table[1]/tbody/tr[3]/td/a NO es visible:
-17:58:24.135 DEBUG AUTOMATION - Borrando Carpeta
-17:58:24.161 DEBUG AUTOMATION - Tomando Screenshot
-17:58:24.332 DEBUG AUTOMATION - Tomando Page Sorce
-17:58:24.332 DEBUG AUTOMATION - Creando directorios
+13:21:16.667 INFO  AUTOMATION - ExecutingUsuario se registra en el sitio
+13:21:20.977 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="single-spa-application:@pase-connect/login-front"]/div[1]/div[2]/main/div[1]/div/h2/strong/button
+13:21:21.101 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="single-spa-application:@pase-connect/login-front"]/div[1]/div[2]/main/div[1]/form
+13:21:21.116 INFO  AUTOMATION - Validando visualidad: By.xpath: //p[@class='MuiTypography-root MuiTypography-body1 css-z4muo5']
+13:21:22.501 INFO  AUTOMATION - Validando visualidad: By.xpath: //button[@type='submit']
+13:21:39.474 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@id='Dont_use_WEB_use_API_OK']
+13:21:39.581 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='email']
+13:21:39.676 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='businessName']
+13:21:39.723 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='TIN']
+13:21:39.811 INFO  AUTOMATION - Validando visualidad: By.xpath: //select//option[normalize-space(text())='Persona Física']
+13:21:39.849 INFO  AUTOMATION - Validando visualidad: By.xpath: //select//option[normalize-space(text())='Persona física con actividad empresarial']
+13:21:39.882 INFO  AUTOMATION - Validando visualidad: By.xpath: //select//option[normalize-space(text())='Comercio']
+13:21:39.907 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='postalCode']
+13:21:39.980 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='firstName']
+13:21:40.013 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='lastName']
+13:21:40.076 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='middleName']
+13:21:40.120 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='position']
+13:21:40.171 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='phone']
+13:21:40.233 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='extension']
+13:21:40.278 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='cellPhone']
+13:21:40.346 INFO  AUTOMATION - Validando visualidad: By.xpath: //input[@name='numberUnits']
+13:21:40.391 INFO  AUTOMATION - Validando visualidad: By.xpath: //select//option[normalize-space(text())='Autobús Camión 2 Ejes']
+13:21:40.422 INFO  AUTOMATION - Validando visualidad: By.xpath: //textarea[@name='message']
+13:21:55.884 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="single-spa-application:@pase-connect/login-front"]/div[1]/div[2]/main/div/div[2]/div/form/div[7]/div/button
+13:22:11.837 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="__nuxt"]/div/div[2]/main/div[2]/div[2]/ul/li[1]/a/div/div
+13:23:21.628 INFO  AUTOMATION - Validando visualidad: By.id: new-password
+13:23:23.957 INFO  AUTOMATION - Validando visualidad: By.id: :r2:
+13:23:24.028 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="single-spa-application:@pase-connect/login-front"]/div[1]/div[2]/main/div[1]/form/div/div[4]/div/button
+13:23:24.078 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="modal-description"]
+13:23:25.663 INFO  AUTOMATION - Validando visualidad: By.xpath: /html/body/div/div[3]/div[2]/div/button
