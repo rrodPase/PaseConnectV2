@@ -3,7 +3,7 @@ package utilities;
 public class MovEntreVentanas {
     private static MovEntreVentanas instancia;
     private String ventanaPrincipal;
-    private String ventanaTMP;
+    private String ventanaTemporal;
 
     public static MovEntreVentanas get() {
         if (instancia == null) {
@@ -18,10 +18,10 @@ public class MovEntreVentanas {
         this.ventanaPrincipal = ventanaPrincipal;
     }
     public String getVentanaTemporal() {
-        return ventanaTMP;
+        return ventanaTemporal;
     }
-    public void setVentanaTemporal(String ventanaTMP) {
-        this.ventanaTMP = ventanaTMP;
+    public void setVentanaTemporal(String ventanaTemporal) {
+        this.ventanaTemporal = ventanaTemporal;
     }
 }
 
