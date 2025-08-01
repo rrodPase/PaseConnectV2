@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import utilities.SingletonData;
 
 public class RegistroPage extends PageObject {
 
@@ -73,14 +74,17 @@ public class RegistroPage extends PageObject {
     }
 
     public void CompletarPassword() {
-        find(NewPassword).sendKeys(password);
-        find(confirmPassword).sendKeys(password);
+        String Passwords =  password;
+        find(NewPassword).sendKeys(Passwords);
+        find(confirmPassword).sendKeys(Passwords);
+        SingletonData.get().setPasswordSin(Passwords);
         find(confirmbtnPass).click();
-
     }
 
     public void ValidacionRegistro() {
         find(validarMessageCon);
         find(AceptarRegistro).click();
+        driver.close();
+        SingletonData.get().getVentanaPrincipal();
     }
 }
