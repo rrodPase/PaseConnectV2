@@ -11,4 +11,10 @@ Feature: LoginEjecutivo
       Then Se registra con exito
       When Ingresa a TM para recibir correo de confirmacion
       And Llena la informacion de contraseña y acepta
-      Then Usuario Registrado Correctamente
+      And Usuario Registrado Correctamente e ingresa a su cuenta
+      When Inicia sesion con su nueva cuenta
+      And Da clic en iniciar sesion
+      Then Usuario ingresa a su cuenta correctamente
+      And Completa informacion de Direccion fiscal
+
+

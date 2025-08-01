@@ -15,15 +15,13 @@ import java.util.List;
 public class MailTmClient extends PageObject {
     private final By usericon = By.xpath("//*[@id=\"reka-dropdown-menu-trigger-v-1-4\"]/span");
     private final By btnInicioSesion = By.xpath("//*[@id=\"reka-dropdown-menu-content-v-1-9\"]/div/div[2]/button[2]/span[2]");
-    private final By inputCorreo = By.name("address");
+    private final By inputCorreo = By.xpath("//*[@id=\"single-spa-application:@pase-connect/login-front\"]/div[1]/div[2]/main/div/div[2]/div/form/div[2]/div[3]/div[1]/input");
     private final By inputPass = By.name("password");
     private final By btnLogin = By.xpath("//button[normalize-space(text())='Iniciar sesión']");
     private final By SelectEmail = By.xpath("//*[@id=\"__nuxt\"]/div/div[2]/main/div[2]/div[2]/ul/li[1]/a/div/div");
     private final By codigoVeri = By.xpath("/html/body/table[1]/tbody/tr[4]/td");
     private final By campoCodigo = By.xpath("//*[@id=\":r3:\"]");
     private final By correoMAILTM = By.xpath("//input[@id='Dont_use_WEB_use_API_OK']");
-    private final By inputCorreoForm = By.xpath("//input[@name='email']");
-    private final By linkPassword = By.xpath("/html/body/table[1]/tbody/tr[3]/td/a");
 
     public MailTmClient(WebDriver driver) {
         super(driver);
@@ -43,7 +41,8 @@ public class MailTmClient extends PageObject {
         WebElement correoEle = find(correoMAILTM);
         String ValorCorreo = correoEle.getAttribute("value");
         cambiarAVentanaPrincipal();
-        find(inputCorreoForm).sendKeys(ValorCorreo);
+        SingletonData.get().setCorreoSin(ValorCorreo);
+        find(inputCorreo).sendKeys(SingletonData.get().getCorreoSin());
     }
 
     private void FillDataTM(String correo, String password) {
@@ -124,12 +123,11 @@ public class MailTmClient extends PageObject {
                     }
                 }
             }
-
             if (hrefFinal != null) {
                 ((JavascriptExecutor) driver).executeScript("window.open(arguments[0], '_blank');", hrefFinal);
                 List<String> tabs = new ArrayList<>(driver.getWindowHandles());
                 driver.switchTo().window(tabs.get(tabs.size() - 1));
-
+                driver.close();
             } else {
                 throw new RuntimeException("No se encontró ningún enlace válido de generación de contraseña.");
             }
