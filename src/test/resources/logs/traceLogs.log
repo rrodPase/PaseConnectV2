@@ -1,0 +1,13 @@
+13:53:51.472 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="email"]
+13:53:51.577 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="password"]
+13:53:51.629 INFO  AUTOMATION - Validando visualidad: By.tagName: body
+13:53:51.683 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="single-spa-application:@pase-connect/login-front"]/div[1]/div[2]/main/div[1]/form/div/div[4]/div/button
+13:53:51.759 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id=":r3:"]
+13:53:54.110 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="reka-dropdown-menu-trigger-v-1-4"]/span
+13:53:54.509 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="reka-dropdown-menu-content-v-1-9"]/div/div[2]/button[2]/span[2]
+13:53:54.647 INFO  AUTOMATION - Validando visualidad: By.name: address
+13:53:54.730 INFO  AUTOMATION - Validando visualidad: By.name: password
+13:54:00.143 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="__nuxt"]/div/div[2]/main/div[2]/div[2]/ul/li[1]/a/div/div
+13:54:04.324 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id=":r3:"]
+13:54:04.436 INFO  AUTOMATION - Validando visualidad: By.xpath: //*[@id="onboarding-app-root"]/div[1]/main/div/div/div/div[1]/p[1]
+13:54:37.511 INFO  AUTOMATION - Se inicio sesion con: [[ChromeDriver: chrome on windows (8ef57c00735c39f3bd7bf257ca83a8fd)] -> xpath: //*[@id="onboarding-app-root"]/div[1]/main/div/div/div/div[1]/p[1]]
